@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  mongodb-test:
+    container_name: mongodb-test
+    image: mongo:5.0.8
+    environment:
+      MONGODB_CONTAINER: true
+    volumes:
+      - ./test.sh:/test.sh
