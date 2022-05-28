@@ -1,0 +1,92 @@
+version: '3.7'
+
+services:
+  zookeeper:
+    container_name: zookeeper
+    hostname: zookeeper
+    image: zookeeper:3.8.0
+
+  clickhouse-1:
+    container_name: clickhouse-1
+    hostname: clickhouse-1
+    image: yandex/clickhouse-server:21.3.20-alpine
+    environment:
+      ZOOKEEPER_HOST: zookeeper
+      ZOOKEEPER_PORT: 2181
+      SHARD_1_REPLICA_1_HOST: clickhouse-1
+      SHARD_1_REPLICA_1_PORT: 9000
+      SHARD_1_REPLICA_2_HOST: clickhouse-2
+      SHARD_1_REPLICA_2_PORT: 9000
+      SHARD_2_REPLICA_1_HOST: clickhouse-3
+      SHARD_2_REPLICA_1_PORT: 9000
+      SHARD_2_REPLICA_2_HOST: clickhouse-4
+      SHARD_2_REPLICA_2_PORT: 9000
+    volumes:
+      - ./config.xml:/etc/clickhouse-server/config.xml:ro
+      - ./datasets:/datasets
+      - ./init.sh:/init.sh
+      - ./test.sh:/test.sh
+    ports:
+      - "8123:8123"
+    depends_on:
+      - zookeeper
+
+  clickhouse-2:
+    container_name: clickhouse-2
+    hostname: clickhouse-2
+    image: yandex/clickhouse-server:21.3.20-alpine
+    environment:
+      ZOOKEEPER_HOST: zookeeper
+      ZOOKEEPER_PORT: 2181
+      SHARD_1_REPLICA_1_HOST: clickhouse-1
+      SHARD_1_REPLICA_1_PORT: 9000
+      SHARD_1_REPLICA_2_HOST: clickhouse-2
+      SHARD_1_REPLICA_2_PORT: 9000
+      SHARD_2_REPLICA_1_HOST: clickhouse-3
+      SHARD_2_REPLICA_1_PORT: 9000
+      SHARD_2_REPLICA_2_HOST: clickhouse-4
+      SHARD_2_REPLICA_2_PORT: 9000
+    volumes:
+      - ./config.xml:/etc/clickhouse-server/config.xml:ro
+    depends_on:
+      - zookeeper
+
+  clickhouse-3:
+    container_name: clickhouse-3
+    hostname: clickhouse-3
+    image: yandex/clickhouse-server:21.3.20-alpine
+    environment:
+      ZOOKEEPER_HOST: zookeeper
+      ZOOKEEPER_PORT: 2181
+      SHARD_1_REPLICA_1_HOST: clickhouse-1
+      SHARD_1_REPLICA_1_PORT: 9000
+      SHARD_1_REPLICA_2_HOST: clickhouse-2
+      SHARD_1_REPLICA_2_PORT: 9000
+      SHARD_2_REPLICA_1_HOST: clickhouse-3
+      SHARD_2_REPLICA_1_PORT: 9000
+      SHARD_2_REPLICA_2_HOST: clickhouse-4
+      SHARD_2_REPLICA_2_PORT: 9000
+    volumes:
+      - ./config.xml:/etc/clickhouse-server/config.xml:ro
+    depends_on:
+      - zookeeper
+
+  clickhouse-4:
+    container_name: clickhouse-4
+    hostname: clickhouse-4
+    image: yandex/clickhouse-server:21.3.20-alpine
+    environment:
+      ZOOKEEPER_HOST: zookeeper
+      ZOOKEEPER_PORT: 2181
+      SHARD_1_REPLICA_1_HOST: clickhouse-1
+      SHARD_1_REPLICA_1_PORT: 9000
+      SHARD_1_REPLICA_2_HOST: clickhouse-2
+      SHARD_1_REPLICA_2_PORT: 9000
+      SHARD_2_REPLICA_1_HOST: clickhouse-3
+      SHARD_2_REPLICA_1_PORT: 9000
+      SHARD_2_REPLICA_2_HOST: clickhouse-4
+      SHARD_2_REPLICA_2_PORT: 9000
+    volumes:
+      - ./config.xml:/etc/clickhouse-server/config.xml:ro
+    depends_on:
+      - zookeeper

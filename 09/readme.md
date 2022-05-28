@@ -10,6 +10,8 @@
 
 ## Тестовая среда
 
+**Clickhouse 21.3.20**.
+
 Сборка:
 ````bash
 docker-compose up -d
@@ -40,6 +42,14 @@ docker-compose down -v
 [CREATE TABLES: OK]
 [DOWNLOAD DATA]
 [DOWNLOAD DATA: OK]
+[TRUNCATE TABLES]
+[TRUNCATE tutorial.hits_v1...]
+[TRUNCATE tutorial.visits_v1...]
+[TRUNCATE test.uk_price_paid...]
+[TRUNCATE mgbench.logs1...]
+[TRUNCATE mgbench.logs2...]
+[TRUNCATE mgbench.logs3...]
+[TRUNCATE TABLES: OK]
 [INSERT DATA]
 [INSERT TO tutorial.hits_v1...]
 [INSERT TO tutorial.visits_v1...]
@@ -1420,3 +1430,6 @@ stairs_east_4   4       1093
 ======================================================
 
 ````
+
+## Clickhouse cluster test
+[Перейти](cluster)

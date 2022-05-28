@@ -451,6 +451,41 @@ echo "[DOWNLOAD DATA]"
 echo "[DOWNLOAD DATA: OK]"
 
 
+echo "[TRUNCATE TABLES]"
+
+echo "[TRUNCATE tutorial.hits_v1...]"
+clickhouse-client <<- "SQL"
+  TRUNCATE TABLE tutorial.hits_v1
+SQL
+
+echo "[TRUNCATE tutorial.visits_v1...]"
+clickhouse-client <<- "SQL"
+  TRUNCATE TABLE tutorial.visits_v1
+SQL
+
+echo "[TRUNCATE test.uk_price_paid...]"
+clickhouse-client <<- "SQL"
+  TRUNCATE TABLE test.uk_price_paid
+SQL
+
+echo "[TRUNCATE mgbench.logs1...]"
+clickhouse-client <<- "SQL"
+  TRUNCATE TABLE mgbench.logs1
+SQL
+
+echo "[TRUNCATE mgbench.logs2...]"
+clickhouse-client <<- "SQL"
+  TRUNCATE TABLE mgbench.logs2
+SQL
+
+echo "[TRUNCATE mgbench.logs3...]"
+clickhouse-client <<- "SQL"
+  TRUNCATE TABLE mgbench.logs3
+SQL
+
+echo "[TRUNCATE TABLES: OK]"
+
+
 echo "[INSERT DATA]"
 
 echo "[INSERT TO tutorial.hits_v1...]"
