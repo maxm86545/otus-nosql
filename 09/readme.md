@@ -80,7 +80,7 @@ docker-compose down -v
 
 = Query result: 
 8873898
-= Query time ms: 0.016
+= Query time ms: 0.004
 ======================================================
 
 === Execute query: 
@@ -89,7 +89,7 @@ docker-compose down -v
 
 = Query result: 
 1676861
-= Query time ms: 0.005
+= Query time ms: 0.004
 ======================================================
 
 === Execute query: 
@@ -113,7 +113,7 @@ http://xmusic/vstreatings of speeds     36925
 http://news.ru/yandex.ru/api.php&api=http://toberria.ru/aphorizana      36902
 http://bashmelnykh-metode.net/video/#!/video/emberkas.ru/detskij-yazi.com/iframe/default.aspx?id=760928&noreask=1&source        34323
 http://censonhaber/547-popalientLog=0&strizhki-petro%3D&comeback=search?lr=213&text     31773
-= Query time ms: 0.153
+= Query time ms: 0.122
 ======================================================
 
 === Execute query: 
@@ -126,7 +126,7 @@ http://censonhaber/547-popalientLog=0&strizhki-petro%3D&comeback=search?lr=213&t
 
 = Query result: 
 10543   8553    81.12491700654462
-= Query time ms: 0.024
+= Query time ms: 0.013
 ======================================================
 
 === Execute query: 
@@ -135,7 +135,7 @@ http://censonhaber/547-popalientLog=0&strizhki-petro%3D&comeback=search?lr=213&t
 
 = Query result: 
 27094923
-= Query time ms: 0.006
+= Query time ms: 0.004
 ======================================================
 
 === Execute query: 
@@ -173,7 +173,7 @@ http://censonhaber/547-popalientLog=0&strizhki-petro%3D&comeback=search?lr=213&t
 2020    375457  ██████████████████████████████
 2021    381448  ██████████████████████████████▌
 2022    374316  █████████████████████████████▊
-= Query time ms: 0.073
+= Query time ms: 0.096
 ======================================================
 
 === Execute query: 
@@ -212,7 +212,7 @@ http://censonhaber/547-popalientLog=0&strizhki-petro%3D&comeback=search?lr=213&t
 2020    1067639 █████████████████████████████████████████████████████▍
 2021    951766  ███████████████████████████████████████████████▌
 2022    915046  █████████████████████████████████████████████▋
-= Query time ms: 0.036
+= Query time ms: 0.038
 ======================================================
 
 === Execute query: 
@@ -332,7 +332,7 @@ READING SOUTH OXFORDSHIRE       500     697317  ██████████�
 WADHURST        WEALDEN 210     696545  █████████████▊
 LEWES   WEALDEN 101     694007  █████████████▊
 PINNER  HARROW  851     692770  █████████████▋
-= Query time ms: 0.110
+= Query time ms: 0.099
 ======================================================
 
 === Execute query: 
@@ -341,7 +341,7 @@ PINNER  HARROW  851     692770  █████████████▋
 
 = Query result: 
 22023859
-= Query time ms: 0.006
+= Query time ms: 0.004
 ======================================================
 
 === Execute query: 
@@ -370,7 +370,7 @@ PINNER  HARROW  851     692770  █████████████▋
 urd     0       23.493331909179688      1.499065357465967       1168.3499755859375      368025.625      22100.285078089873      220.95001220703125      108069.65625    8129.441456009021
 anansi  0       22.5    0.1426860871961902      938.949951171875        2355335.75      9177.160347696004       216.8800048828125       2354536.25      13467.316385337206
 aragog  0       31.14000129699707       0.46608482347828106     1318.68994140625        27836488        328922.02496959124      308.9499816894531       40642404        825490.5620742807
-= Query time ms: 0.017
+= Query time ms: 0.018
 ======================================================
 
 === Execute query: 
@@ -403,7 +403,7 @@ cslab9e 2017-01-10 14:18:45
 cslab9e 2017-01-10 14:19:15
 cslab9e 2017-01-10 14:19:30
 cslab9e 2017-01-10 14:19:45
-= Query time ms: 0.023
+= Query time ms: 0.029
 ======================================================
 
 === Execute query: 
@@ -692,7 +692,7 @@ cslab9e 2017-01-10 14:19:45
 2017-01-11      12      0.12043069417898854     0.09808347170862058     0.09894513908172181     2143276.6302083335      8388604
 2017-01-11      13      0.1019771532776455      0.09134451388381422     0.0860342363230302      2143382.409375  8388604
 2017-01-11      14      0.11532607930712402     0.08677697167149745     0.0793671875326254      2143348.353515625       8388604
-= Query time ms: 0.020
+= Query time ms: 0.019
 ======================================================
 
 === Execute query: 
@@ -718,7 +718,7 @@ adminhost       366
 cadbury 357
 york    193
 reflect 156
-= Query time ms: 0.042
+= Query time ms: 0.035
 ======================================================
 
 === Execute query: 
@@ -756,7 +756,7 @@ chimera 2017-01-05      8144
 chimera 2017-01-07      6308.4663
 chimera 2017-01-09      9370
 chimera 2017-01-10      7147.467
-= Query time ms: 0.115
+= Query time ms: 0.138
 ======================================================
 
 === Execute query: 
@@ -783,17 +783,17 @@ chimera 2017-01-10      7147.467
   LIMIT 10;
 
 = Query result: 
-2017-01-10      17      87.94858539170777       71.3852536206819        159.33383901238966
-2017-01-10      18      89.64930670570368       69.1560603981159        158.80536710381958
-2017-01-10      19      73.60724927620788       81.40722209611722       155.0144713723251
-2017-01-10      20      68.54794632249275       85.50667667204647       154.05462299453922
-2017-01-11      13      42.00069002922162       69.61384714089128       111.6145371701129
-2017-01-10      16      52.18435269713242       56.94834975170366       109.13270244883608
-2017-01-10      15      58.92187069434698       47.70097635240854       106.62284704675551
-2017-01-10      14      60.980273885919715      44.44881952093316       105.42909340685287
-2017-01-10      21      45.79773242298879       54.04821061966008       99.84594304264887
-2017-01-11      4       48.962176019675624      48.376258737838214      97.33843475751384
-= Query time ms: 0.032
+2017-01-10      17      87.94858539170764       71.3852536206819        159.33383901238955
+2017-01-10      18      89.64930670570365       69.15606039811591       158.80536710381955
+2017-01-10      19      73.60724927620784       81.40722209611711       155.01447137232495
+2017-01-10      20      68.54794632249282       85.5066766720465        154.05462299453933
+2017-01-11      13      42.00069002922154       69.61384714089108       111.61453717011261
+2017-01-10      16      52.1843526971324        56.94834975170362       109.13270244883601
+2017-01-10      15      58.92187069434687       47.70097635240873       106.6228470467556
+2017-01-10      14      60.980273885919765      44.44881952093312       105.42909340685289
+2017-01-10      21      45.79773242298877       54.048210619660104      99.84594304264888
+2017-01-11      4       48.962176019675596      48.37625873783824       97.33843475751384
+= Query time ms: 0.158
 ======================================================
 
 === Execute query: 
@@ -802,7 +802,7 @@ chimera 2017-01-10      7147.467
 
 = Query result: 
 75748118
-= Query time ms: 0.004
+= Query time ms: 0.007
 ======================================================
 
 === Execute query: 
@@ -815,7 +815,7 @@ chimera 2017-01-10      7147.467
 = Query result: 
 2012-12-21 16:58:00     229.50.247.232  //cgi-bin/feedback/     500     410
 2012-12-23 23:28:02     229.50.247.232  //cgi-bin/feedback/     500     410
-= Query time ms: 0.015
+= Query time ms: 0.025
 ======================================================
 
 === Execute query: 
@@ -830,7 +830,7 @@ chimera 2017-01-10      7147.467
 = Query result: 
 2012-05-13 20:17:05     201.183.185.11  /?-nd+auto_prepend_file%3D/etc/passwd   200     21809
 2012-05-09 14:46:58     201.183.185.11  /?-nd+auto_prepend_file%3D/etc/passwd   200     21173
-= Query time ms: 0.059
+= Query time ms: 0.137
 ======================================================
 
 === Execute query: 
@@ -868,7 +868,7 @@ chimera 2017-01-10      7147.467
 /research       5.040612211618354
 /teaching       2
 /ugrad  2.4527363184079602
-= Query time ms: 0.242
+= Query time ms: 0.363
 ======================================================
 
 === Execute query: 
@@ -889,7 +889,7 @@ chimera 2017-01-10      7147.467
 70.86.124.37    273057
 67.153.111.239  167287
 249.92.17.134   112909
-= Query time ms: 0.169
+= Query time ms: 0.152
 ======================================================
 
 === Execute query: 
@@ -1270,7 +1270,7 @@ chimera 2017-01-10      7147.467
 2012-12-29      8247
 2012-12-30      8328
 2012-12-31      7824
-= Query time ms: 0.359
+= Query time ms: 0.342
 ======================================================
 
 === Execute query: 
@@ -1285,7 +1285,7 @@ chimera 2017-01-10      7147.467
 
 = Query result: 
 0.0046296999419207785   295.028835936
-= Query time ms: 2.086
+= Query time ms: 2.139
 ======================================================
 
 === Execute query: 
@@ -1294,7 +1294,7 @@ chimera 2017-01-10      7147.467
 
 = Query result: 
 108957039
-= Query time ms: 0.006
+= Query time ms: 0.005
 ======================================================
 
 === Execute query: 
@@ -1307,7 +1307,7 @@ chimera 2017-01-10      7147.467
 = Query result: 
 2019-12-01 09:30:13.417 16C448031108ABA balcony_5       door    5       temperature     F       32
 2019-12-01 09:59:58.874 16C448031108ABA balcony_5       door    5       temperature     F       32
-= Query time ms: 0.007
+= Query time ms: 0.024
 ======================================================
 
 === Execute query: 
@@ -1342,64 +1342,7 @@ lobby_right_1   1       1641
 stairs_east_5   5       1637
 balcony_3       3       1619
 stairs_east_4   4       1093
-= Query time ms: 0.036
-======================================================
-
-=== Execute query: 
-  WITH temperature AS (
-    SELECT dt,
-           device_name,
-           device_type,
-           device_floor
-    FROM (
-      SELECT dt,
-             hr,
-             device_name,
-             device_type,
-             device_floor,
-             AVG(event_value) AS temperature_hourly_avg
-      FROM (
-        SELECT CAST(log_time AS DATE) AS dt,
-               EXTRACT(HOUR FROM log_time) AS hr,
-               device_name,
-               device_type,
-               device_floor,
-               event_value
-        FROM mgbench.logs3
-        WHERE event_type = 'temperature'
-      ) AS r
-      GROUP BY dt,
-               hr,
-               device_name,
-               device_type,
-               device_floor
-    ) AS s
-    GROUP BY dt,
-             device_name,
-             device_type,
-             device_floor
-    HAVING MAX(temperature_hourly_avg) - MIN(temperature_hourly_avg) >= 25.0
-  )
-  SELECT DISTINCT device_name,
-         device_type,
-         device_floor,
-         'WINTER'
-  FROM temperature
-  WHERE dt >= DATE '2018-12-01'
-    AND dt < DATE '2019-03-01'
-  UNION
-  SELECT DISTINCT device_name,
-         device_type,
-         device_floor,
-         'SUMMER'
-  FROM temperature
-  WHERE dt >= DATE '2019-06-01'
-    AND dt < DATE '2019-09-01';
-
-= Query result: 
-= Query time ms: 0.003
-Received exception from server (version 21.3.20):
-Code: 558. DB::Exception: Received from localhost:9000. DB::Exception: Expected ALL or DISTINCT in SelectWithUnion query, because setting (union_default_mode) is empty: While processing WITH temperature AS (SELECT dt, device_name, device_type, device_floor FROM (SELECT dt, hr, device_name, device_type, device_floor, AVG(event_value) AS temperature_hourly_avg FROM (SELECT CAST(log_time, 'DATE') AS dt, toHour(log_time) AS hr, device_name, device_type, device_floor, event_value FROM mgbench.logs3 WHERE event_type = 'temperature') AS r GROUP BY dt, hr, device_name, device_type, device_floor) AS s GROUP BY dt, device_name, device_type, device_floor HAVING (MAX(temperature_hourly_avg) - MIN(temperature_hourly_avg)) >= 25.) SELECT DISTINCT device_name, device_type, device_floor, 'WINTER' FROM temperature WHERE (dt >= toDate('2018-12-01')) AND (dt < toDate('2019-03-01')) UNION  WITH temperature AS (SELECT dt, device_name, device_type, device_floor FROM (SELECT dt, hr, device_name, device_type, device_floor, AVG(event_value) AS temperature_hourly_avg FROM (SELECT CAST(log_time, 'DATE') AS dt, toHour(log_time) AS hr, device_name, device_type, device_floor, event_value FROM mgbench.logs3 WHERE event_type = 'temperature') AS r GROUP BY dt, hr, device_name, device_type, device_floor) AS s GROUP BY dt, device_name, device_type, device_floor HAVING (MAX(temperature_hourly_avg) - MIN(temperature_hourly_avg)) >= 25.) SELECT DISTINCT device_name, device_type, device_floor, 'SUMMER' FROM temperature WHERE (dt >= toDate('2019-06-01')) AND (dt < toDate('2019-09-01')). 
+= Query time ms: 0.035
 ======================================================
 
 === Execute query: 
@@ -1473,7 +1416,7 @@ Code: 558. DB::Exception: Received from localhost:9000. DB::Exception: Expected 
 2019    10      900170.2429565514       1209.9062405329992      64953.121362668586      87.30258247670508       98168.02805722524       218.6370335350228       310577.09491537174      417.44233187549963
 2019    11      881836.9061517064       1224.773480766259       61941.82869595774       86.03031763327463       181716.37704881537      294.9941185857392       258322.18736711267      358.7808157876565
 2019    12      45118.35452979575       1253.28762582766        2884.8668441554055      80.13519011542793       13576.481448950077      377.1244846930577       12249.124855753844      340.25346821538454
-= Query time ms: 2.139
+= Query time ms: 2.326
 ======================================================
 
 ````
