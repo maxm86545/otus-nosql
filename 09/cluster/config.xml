@@ -127,12 +127,12 @@
                 <weight>1</weight>
                 <replica>
                     <host from_env="SHARD_1_REPLICA_1_HOST"/>
-                    <port from_env="SHARD_1_REPLICA_1_PORT"/>
+                    <port>9000</port>
                     <priority>1</priority>
                 </replica>
                 <replica>
                     <host from_env="SHARD_1_REPLICA_2_HOST"/>
-                    <port from_env="SHARD_1_REPLICA_2_PORT"/>
+                    <port>9000</port>
                     <priority>1</priority>
                 </replica>
             </shard>
@@ -141,12 +141,12 @@
                 <weight>1</weight>
                 <replica>
                     <host from_env="SHARD_2_REPLICA_1_HOST"/>
-                    <port from_env="SHARD_2_REPLICA_1_PORT"/>
+                    <port>9000</port>
                     <priority>1</priority>
                 </replica>
                 <replica>
                     <host from_env="SHARD_2_REPLICA_2_HOST"/>
-                    <port from_env="SHARD_2_REPLICA_2_PORT"/>
+                    <port>9000</port>
                     <priority>1</priority>
                 </replica>
             </shard>

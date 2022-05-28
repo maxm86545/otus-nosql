@@ -14,20 +14,14 @@ services:
       ZOOKEEPER_HOST: zookeeper
       ZOOKEEPER_PORT: 2181
       SHARD_1_REPLICA_1_HOST: clickhouse-1
-      SHARD_1_REPLICA_1_PORT: 9000
       SHARD_1_REPLICA_2_HOST: clickhouse-2
-      SHARD_1_REPLICA_2_PORT: 9000
       SHARD_2_REPLICA_1_HOST: clickhouse-3
-      SHARD_2_REPLICA_1_PORT: 9000
       SHARD_2_REPLICA_2_HOST: clickhouse-4
-      SHARD_2_REPLICA_2_PORT: 9000
     volumes:
       - ./config.xml:/etc/clickhouse-server/config.xml:ro
       - ./datasets:/datasets
       - ./init.sh:/init.sh
       - ./test.sh:/test.sh
-    ports:
-      - "8123:8123"
     depends_on:
       - zookeeper
 
@@ -39,13 +33,9 @@ services:
       ZOOKEEPER_HOST: zookeeper
       ZOOKEEPER_PORT: 2181
       SHARD_1_REPLICA_1_HOST: clickhouse-1
-      SHARD_1_REPLICA_1_PORT: 9000
       SHARD_1_REPLICA_2_HOST: clickhouse-2
-      SHARD_1_REPLICA_2_PORT: 9000
       SHARD_2_REPLICA_1_HOST: clickhouse-3
-      SHARD_2_REPLICA_1_PORT: 9000
       SHARD_2_REPLICA_2_HOST: clickhouse-4
-      SHARD_2_REPLICA_2_PORT: 9000
     volumes:
       - ./config.xml:/etc/clickhouse-server/config.xml:ro
     depends_on:
@@ -59,13 +49,9 @@ services:
       ZOOKEEPER_HOST: zookeeper
       ZOOKEEPER_PORT: 2181
       SHARD_1_REPLICA_1_HOST: clickhouse-1
-      SHARD_1_REPLICA_1_PORT: 9000
       SHARD_1_REPLICA_2_HOST: clickhouse-2
-      SHARD_1_REPLICA_2_PORT: 9000
       SHARD_2_REPLICA_1_HOST: clickhouse-3
-      SHARD_2_REPLICA_1_PORT: 9000
       SHARD_2_REPLICA_2_HOST: clickhouse-4
-      SHARD_2_REPLICA_2_PORT: 9000
     volumes:
       - ./config.xml:/etc/clickhouse-server/config.xml:ro
     depends_on:
@@ -79,13 +65,9 @@ services:
       ZOOKEEPER_HOST: zookeeper
       ZOOKEEPER_PORT: 2181
       SHARD_1_REPLICA_1_HOST: clickhouse-1
-      SHARD_1_REPLICA_1_PORT: 9000
       SHARD_1_REPLICA_2_HOST: clickhouse-2
-      SHARD_1_REPLICA_2_PORT: 9000
       SHARD_2_REPLICA_1_HOST: clickhouse-3
-      SHARD_2_REPLICA_1_PORT: 9000
       SHARD_2_REPLICA_2_HOST: clickhouse-4
-      SHARD_2_REPLICA_2_PORT: 9000
     volumes:
       - ./config.xml:/etc/clickhouse-server/config.xml:ro
     depends_on:

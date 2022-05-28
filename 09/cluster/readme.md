@@ -2,9 +2,6 @@
 
 ## Тестовые данные
 - Таблица `test.uk_price_paid`, 27094923 строк, [документация 1](https://clickhouse.com/docs/en/getting-started/example-datasets/uk-price-paid), [документация 2](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads), [источник](http://prod.publicdata.landregistry.gov.uk.s3-website-eu-west-1.amazonaws.com/pp-complete.csv).
-- Таблица `mgbench.logs1`, 22023859 строк, [документация](https://clickhouse.com/docs/en/getting-started/example-datasets/brown-benchmark/), [источник](https://datasets.clickhouse.com/mgbench1.csv.xz).
-- Таблица `mgbench.logs2`, 75748118 строк, [документация](https://clickhouse.com/docs/en/getting-started/example-datasets/brown-benchmark/), [источник](https://datasets.clickhouse.com/mgbench2.csv.xz).
-- Таблица `mgbench.logs3`, 108957039 строк, [документация](https://clickhouse.com/docs/en/getting-started/example-datasets/brown-benchmark/), [источник](https://datasets.clickhouse.com/mgbench3.csv.xz).
 
 ## Тестовая среда
 
