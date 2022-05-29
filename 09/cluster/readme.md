@@ -19,7 +19,7 @@ docker-compose exec clickhouse-1 ./init.sh
 
 Запуск теста:
 ````bash
-docker-compose exec clickhouse ./test.sh
+docker-compose exec clickhouse-1 ./test.sh
 ````
 
 Очистка:
