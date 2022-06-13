@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+
+  elasticsearch:
+    container_name: elasticsearch
+    hostname: elasticsearch
+    image: elasticsearch:8.2.2
+    environment:
+      discovery.type: single-node
+      cluster.name: elasticsearch
+      ES_JAVA_OPTS: '-Xms1g -Xmx1g'
+      xpack.security.enabled: true
+      ELASTIC_USER: elastic
+      ELASTIC_PASSWORD: elastic
+    volumes:
+      - ./init.sh:/init.sh
+      - ./test.sh:/test.sh
