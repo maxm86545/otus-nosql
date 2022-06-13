@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+
+  cassandra-1:
+    container_name: cassandra-1
+    hostname: cassandra-1
+    image: cassandra:4.0.4
+    environment: &environment
+      CASSANDRA_SEEDS: 'cassandra-1,cassandra-2'
+      CASSANDRA_CLUSTER_NAME: 'MyCassandra'
+
+  cassandra-2:
+    container_name: cassandra-2
+    hostname: cassandra-2
+    image: cassandra:4.0.4
+    environment: *environment
+
+  cassandra-3:
+    container_name: cassandra-3
+    hostname: cassandra-3
+    image: cassandra:4.0.4
+    environment: *environment
