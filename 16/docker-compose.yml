@@ -1,0 +1,60 @@
+version: '3.7'
+
+services:
+
+  redis-0:
+    container_name: redis-0
+    hostname: redis-0
+    image: redis:7.0.2-alpine
+    command: redis-server /usr/local/etc/redis/redis.conf
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf:ro
+      - ./test-json.sh:/test-json.sh:ro
+
+  redis-1:
+    container_name: redis-1
+    hostname: redis-1
+    image: redis:7.0.2-alpine
+    command: redis-server /usr/local/etc/redis/redis-cluster.conf
+    volumes:
+      - ./redis-cluster.conf:/usr/local/etc/redis/redis-cluster.conf:ro
+
+  redis-2:
+    container_name: redis-2
+    hostname: redis-2
+    image: redis:7.0.2-alpine
+    command: redis-server /usr/local/etc/redis/redis-cluster.conf
+    volumes:
+      - ./redis-cluster.conf:/usr/local/etc/redis/redis-cluster.conf:ro
+
+  redis-3:
+    container_name: redis-3
+    hostname: redis-3
+    image: redis:7.0.2-alpine
+    command: redis-server /usr/local/etc/redis/redis-cluster.conf
+    volumes:
+      - ./redis-cluster.conf:/usr/local/etc/redis/redis-cluster.conf:ro
+
+  redis-4:
+    container_name: redis-4
+    hostname: redis-4
+    image: redis:7.0.2-alpine
+    command: redis-server /usr/local/etc/redis/redis-cluster.conf
+    volumes:
+      - ./redis-cluster.conf:/usr/local/etc/redis/redis-cluster.conf:ro
+
+  redis-5:
+    container_name: redis-5
+    hostname: redis-5
+    image: redis:7.0.2-alpine
+    command: redis-server /usr/local/etc/redis/redis-cluster.conf
+    volumes:
+      - ./redis-cluster.conf:/usr/local/etc/redis/redis-cluster.conf:ro
+
+  redis-6:
+    container_name: redis-6
+    hostname: redis-6
+    image: redis:7.0.2-alpine
+    command: redis-server /usr/local/etc/redis/redis-cluster.conf
+    volumes:
+      - ./redis-cluster.conf:/usr/local/etc/redis/redis-cluster.conf:ro
