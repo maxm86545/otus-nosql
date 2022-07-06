@@ -77,3 +77,33 @@ services:
       - ETCD_INITIAL_CLUSTER_TOKEN=etcd-cluster
       - ETCD_INITIAL_CLUSTER=etcd1=http://etcd-1:2380,etcd2=http://etcd-2:2380,etcd3=http://etcd-3:2380,etcd4=http://etcd-4:2380,etcd5=http://etcd-5:2380
       - ETCD_INITIAL_CLUSTER_STATE=new
+
+  consul-1:
+    container_name: consul-1
+    hostname: consul-1
+    image: bitnami/consul:1.12.2
+    environment:
+      - CONSUL_BOOTSTRAP_EXPECT=3
+      - CONSUL_CLIENT_LAN_ADDRESS=0.0.0.0
+      - CONSUL_DISABLE_KEYRING_FILE=true
+      - CONSUL_RETRY_JOIN_ADDRESS=consul-1
+
+  consul-2:
+    container_name: consul-2
+    hostname: consul-2
+    image: bitnami/consul:1.12.2
+    environment:
+      - CONSUL_BOOTSTRAP_EXPECT=3
+      - CONSUL_CLIENT_LAN_ADDRESS=0.0.0.0
+      - CONSUL_DISABLE_KEYRING_FILE=true
+      - CONSUL_RETRY_JOIN_ADDRESS=consul-1
+
+  consul-3:
+    container_name: consul-3
+    hostname: consul-3
+    image: bitnami/consul:1.12.2
+    environment:
+      - CONSUL_BOOTSTRAP_EXPECT=3
+      - CONSUL_CLIENT_LAN_ADDRESS=0.0.0.0
+      - CONSUL_DISABLE_KEYRING_FILE=true
+      - CONSUL_RETRY_JOIN_ADDRESS=consul-1

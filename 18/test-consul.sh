@@ -3,43 +3,43 @@
 set -e
 
 KEYS=10
-NODES=5
+NODES=3
 FAILURE_TOLERANCE=$((NODES - (NODES / 2 + 1)))
 
-function etcdctl() {
-  echo "[NODE${1}] etcdctl ${2}"
-  docker-compose exec "etcd-${1}" sh -c "etcdctl ${2}"
+function consul() {
+  echo "[NODE${1}] consul ${2}"
+  docker-compose exec "consul-${1}" sh -c "consul ${2}"
   echo
 }
 
 function stop-node() {
   echo "[NODE${1}] STOP"
-  docker-compose stop "etcd-${1}"
+  docker-compose stop "consul-${1}"
   echo
 }
 
 echo "[KEYS = ${KEYS}][NODES = ${NODES}][FAILURE TOLERANCE = ${FAILURE_TOLERANCE}]"
 echo
 
-etcdctl $((1 % NODES)) 'member list'
+consul $((1 % NODES)) 'members'
 
-etcdctl $((2 % NODES)) 'del "" --from-key=true'
+consul $((2 % NODES)) 'kv delete test/'
 
 i=0
 while [ $i -lt "$KEYS" ]; do
-  etcdctl $((i % NODES + 1)) "put key${i} value${i}"
+  consul $((i % NODES + 1)) "kv put test/key${i} value${i}"
   i=$((i + 1))
 done
 
 NODE=1
 while [ $NODE -le "$FAILURE_TOLERANCE" ]; do
-  etcdctl $NODE "get --prefix key"
+  consul $NODE "kv get -recurse"
   stop-node $NODE
   NODE=$((NODE + 1))
 done
 
-etcdctl $NODES "get --prefix key"
+consul $NODES "kv get -recurse"
 
 stop-node $NODE
 
-etcdctl $NODES "get --prefix key"
+consul $NODES "kv get -recurse"
