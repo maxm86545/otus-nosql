@@ -1,0 +1,40 @@
+version: '3.7'
+
+services:
+  couchbase-1:
+    container_name: couchbase-1
+    hostname: couchbase-1.local
+    image: couchbase:enterprise-7.1.0
+    environment:
+      USERNAME: Administrator
+      PASSWORD: password
+    volumes:
+      - ./init.sh:/init.sh
+    ports:
+      - "8091:8091"
+      - "18091:18091"
+
+  couchbase-2:
+    container_name: couchbase-2
+    hostname: couchbase-2.local
+    image: couchbase:enterprise-7.1.0
+
+  couchbase-3:
+    container_name: couchbase-3
+    hostname: couchbase-3.local
+    image: couchbase:enterprise-7.1.0
+
+  couchbase-4:
+    container_name: couchbase-4
+    hostname: couchbase-4.local
+    image: couchbase:enterprise-7.1.0
+
+  couchbase-5:
+    container_name: couchbase-5
+    hostname: couchbase-5.local
+    image: couchbase:enterprise-7.1.0
+
+  couchbase-6:
+    container_name: couchbase-6
+    hostname: couchbase-6.local
+    image: couchbase:enterprise-7.1.0
