@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+
+  tarantool_nginx:
+    container_name: tarantool_nginx
+    hostname: nginx
+    image: nginx:1.22.0-alpine
+
+  tarantool_tarantool1:
+    container_name: tarantool_tarantool1
+    hostname: tarantool1
+    image: tarantool/tarantool:2.10.1
+    environment: &environment
+      TARANTOOL_USER_NAME: "root"
+      TARANTOOL_USER_PASSWORD: "root"
+      TARANTOOL_REPLICATION: "tarantool1,tarantool2,tarantool3"
+    volumes:
+      - ./test.lua:/opt/tarantool/test.lua:ro
+
+  tarantool_tarantool2:
+    container_name: tarantool_tarantool2
+    hostname: tarantool2
+    image: tarantool/tarantool:2.10.1
+    environment:
+      <<: *environment
+
+  tarantool_tarantool3:
+    container_name: tarantool_tarantool3
+    hostname: tarantool3
+    image: tarantool/tarantool:2.10.1
+    environment:
+      <<: *environment
