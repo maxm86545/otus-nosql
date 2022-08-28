@@ -1,8 +1,8 @@
-local fiber = require('fiber');
-local expirationd = require('expirationd')
-local client = require('http.client')
+fiber = require('fiber');
+expirationd = require('expirationd')
+client = require('http.client')
 
-local space = box.schema.space.create('test', { if_not_exists = true })
+space = box.schema.space.create('test', { if_not_exists = true })
 space:create_index('primary', { type = 'hash', parts = { 1, 'unsigned' }, if_not_exists = true })
 space:create_index('status', { type = 'tree', parts = { 2, 'string' }, if_not_exists = true, unique = false })
 space:truncate()
@@ -29,18 +29,18 @@ expirationd.start(
         }
 )
 
-space:insert { 1, 'stopped', 0 }
-space:insert { 2, 'started', 2 }
-space:insert { 3, 'started', 5 }
-space:insert { 4, 'started', 10 }
-space:insert { 5, 'started', 50 }
-space:insert { 6, 'stopped', 70 }
+space:insert { 1, 'stopped', 0, 1 }
+space:insert { 2, 'started', 2, 1 }
+space:insert { 3, 'started', 5, 1 }
+space:insert { 4, 'started', 10, 1 }
+space:insert { 5, 'started', 50, 2 }
+space:insert { 6, 'stopped', 70, 1 }
 
 space:select({})
 
 for _ = 1, 10 do
     for _, tuple in space.index.status:pairs { 'started' } do
-        space:update({ tuple[1] }, { { '-', 3, 1 } })
+        space:update({ tuple[1] }, { { '-', 3, tuple[4] } })
     end
     fiber.sleep(1)
 end

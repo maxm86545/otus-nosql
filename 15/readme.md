@@ -45,9 +45,6 @@ unix/:/var/run/tarantool/tarantool.sock> ---
 ...
 
 unix/:/var/run/tarantool/tarantool.sock> ---
-...
-
-unix/:/var/run/tarantool/tarantool.sock> ---
 - unique: true
   parts:
   - type: unsigned
@@ -88,9 +85,9 @@ unix/:/var/run/tarantool/tarantool.sock>                                        
     status: suspended
     name: worker of "vps-stop"
     id: 127
-  do_worker_iteration: 'function: 0x7f5c7fa1a398'
-  start_key: 'function: 0x7f5c662d0b08'
-  iterate_with: 'function: 0x7f5c7fa18f18'
+  do_worker_iteration: 'function: 0x7f8c909b0878'
+  start_key: 'function: 0x7f8c77d038b8'
+  iterate_with: 'function: 0x7f8c909b0e38'
   atomic_iteration: false
   index:
     unique: true
@@ -103,65 +100,65 @@ unix/:/var/run/tarantool/tarantool.sock>                                        
     space_id: 512
     name: primary
   full_scan_time: 3600
-  process_expired_tuple: 'function: 0x7f5c662d0940'
-  is_tuple_expired: 'function: 0x7f5c662d0d98'
+  process_expired_tuple: 'function: 0x7f8c77d03bb0'
+  is_tuple_expired: 'function: 0x7f8c77d03b80'
   iteration_delay: 1
   space_id: 512
   iterator_type: ALL
   worker_cancelled: false
-  on_full_scan_error: 'function: 0x7f5c7fa1a188'
-  on_full_scan_start: 'function: 0x7f5c7fa1a188'
+  on_full_scan_error: 'function: 0x7f8c90907990'
+  on_full_scan_start: 'function: 0x7f8c90907990'
   vinyl_assumed_space_len_factor: 2
   expired_tuples_count: 0
   checked_tuples_count: 0
   full_scan_delay: 1
-  start_time: 1661720987.0417
+  start_time: 1661721913.9681
   vinyl_assumed_space_len: 10000000
   restarts: 1
-  on_full_scan_success: 'function: 0x7f5c7fa1a188'
+  on_full_scan_success: 'function: 0x7f8c90907990'
   tuples_per_iteration: 50
-  on_full_scan_complete: 'function: 0x7f5c7fa1a188'
+  on_full_scan_complete: 'function: 0x7f8c90907990'
   name: vps-stop
-  process_while: 'function: 0x7f5c7fa1a1e8'
+  process_while: 'function: 0x7f8c909b1678'
 ...
 
 unix/:/var/run/tarantool/tarantool.sock> ---
 ...
 
 unix/:/var/run/tarantool/tarantool.sock> ---
-- [1, 'stopped', 0]
+- [1, 'stopped', 0, 1]
 ...
 
 unix/:/var/run/tarantool/tarantool.sock> ---
-- [2, 'started', 2]
+- [2, 'started', 2, 1]
 ...
 
 unix/:/var/run/tarantool/tarantool.sock> ---
-- [3, 'started', 5]
+- [3, 'started', 5, 1]
 ...
 
 unix/:/var/run/tarantool/tarantool.sock> ---
-- [4, 'started', 10]
+- [4, 'started', 10, 1]
 ...
 
 unix/:/var/run/tarantool/tarantool.sock> ---
-- [5, 'started', 50]
+- [5, 'started', 50, 2]
 ...
 
 unix/:/var/run/tarantool/tarantool.sock> ---
-- [6, 'stopped', 70]
+- [6, 'stopped', 70, 1]
 ...
 
 unix/:/var/run/tarantool/tarantool.sock> ---
 ...
 
 unix/:/var/run/tarantool/tarantool.sock> ---
-- - [1, 'stopped', 0]
-  - [2, 'started', 2]
-  - [3, 'started', 5]
-  - [4, 'started', 10]
-  - [5, 'started', 50]
-  - [6, 'stopped', 70]
+- - [1, 'stopped', 0, 1]
+  - [2, 'started', 2, 1]
+  - [3, 'started', 5, 1]
+  - [4, 'started', 10, 1]
+  - [5, 'started', 50, 2]
+  - [6, 'stopped', 70, 1]
 ...
 
 unix/:/var/run/tarantool/tarantool.sock> ---
@@ -174,12 +171,12 @@ unix/:/var/run/tarantool/tarantool.sock> ---
 ...
 
 unix/:/var/run/tarantool/tarantool.sock> ---
-- - [1, 'stopped', 0]
-  - [2, 'stopped', 0]
-  - [3, 'stopped', 0]
-  - [4, 'stopped', 0]
-  - [5, 'started', 40]
-  - [6, 'stopped', 70]
+- - [1, 'stopped', 0, 1]
+  - [2, 'stopped', 0, 1]
+  - [3, 'stopped', 0, 1]
+  - [4, 'stopped', 0, 1]
+  - [5, 'started', 30, 2]
+  - [6, 'stopped', 70, 1]
 ...
 
 unix/:/var/run/tarantool/tarantool.sock> 
